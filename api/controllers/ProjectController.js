@@ -13,10 +13,13 @@ module.exports = {
     return res.ok("you can access this page");
   },
   list: function(req, res, next) {
-    Project.find({}, function(projects) {
-      console.log("projects", projects);
+    Project.find({}).exec(function(err, projects) {
+      return res.view('project/list', {projects: projects});
     });
-    return res.view('projectsList');
+    //return res.view('project/list');
+  },
+  add: function(req, res, next) {
+    return res.view('project/add');
   }
 };
 
