@@ -3,12 +3,14 @@
   <div class="col-sm-6">
       <div class="well bs-component">
         <form class="form-horizontal" action="/project/create" method="post">
+          <input type="hidden" name="team" value="<%=(session.user.auth.username)%>" />
+          <input type="hidden" name="score" value="0" />
           <fieldset>
             <legend>Submit a New Project</legend>
             <div class="form-group">
-              <label for="inputTeam" class="col-lg-2 control-label">Team Name</label>
+              <label for="inputTeam" class="col-lg-2 control-label">Name</label>
               <div class="col-lg-10">
-                <input type="text" class="form-control" id="inputTeam" name="team" placeholder="Team Name">
+                <input type="text" class="form-control" id="inputTeam" name="name" placeholder="Project Name">
               </div>
             </div>
             <div class="form-group">
