@@ -1,3 +1,3 @@
 # project-race
 
-a [Sails](http://sailsjs.org) application
+Available Here: [http://webdev-projects.herokuapp.com/](http://webdev-projects.herokuapp.com/)
